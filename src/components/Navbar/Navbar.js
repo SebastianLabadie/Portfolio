@@ -107,6 +107,12 @@ const NavbarStyled = styled.div`
       font-size: 3rem;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .close{
+      right:2em;
+    }
+  }
 `;
 
 const RenderMenuItems = MenuItems.map((item, i) => {

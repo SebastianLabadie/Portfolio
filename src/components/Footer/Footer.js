@@ -11,7 +11,7 @@ const FooterStyled = styled.div`
     padding: 1em;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-gap: 100px;
+    grid-gap: 6.2em;
   }
   .info {
     margin-top: 0.8em;
@@ -35,6 +35,28 @@ const FooterStyled = styled.div`
     }
   }
   
+
+  @media screen and (max-width: 1000px) {
+      .container{
+          grid-gap:4.4em;
+      }
+  }
+  @media screen and (max-width: 900px) {
+      .container{
+          grid-gap:3em;
+          grid-template-columns:repeat(2,auto);
+        
+      }
+
+  }
+  @media screen and (max-width: 500px) {
+      
+      .container{
+        grid-template-columns:repeat(auto-fill,70vw);
+        justify-content:center;
+      }
+  }
+
 `;
 
 const Footer = () => {

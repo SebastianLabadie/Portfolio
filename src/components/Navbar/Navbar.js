@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { MenuItems } from "./MenuItems";
-import Wrapper from '../Wrapper'
+import Wrapper from "../Wrapper";
 
+let height = window.innerHeight
 const NavbarStyled = styled.div`
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -48,7 +49,6 @@ const NavbarStyled = styled.div`
       color:rgb(224, 80, 80);
       &:after {
         width: 100%;
-        color: blue;
         transition: width 0.3s;
       }
     }
@@ -76,7 +76,7 @@ const NavbarStyled = styled.div`
       top: 0;
       left: -200vw;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       background: rgba(19, 20, 20, 1);
       opacity: 1;
       z-index: 100;
@@ -108,11 +108,26 @@ const NavbarStyled = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 800px) {
     .close{
+      top:0.8em;
       right:2em;
     }
+    
   }
+  @media screen and (max-width: 479px) {
+    .close{
+      top:1em;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    .close{
+      top:0.9em;
+    }
+  }
+
+  
+
 `;
 
 const RenderMenuItems = MenuItems.map((item, i) => {
@@ -126,29 +141,40 @@ const RenderMenuItems = MenuItems.map((item, i) => {
 });
 
 const Navbar = () => {
+
   const [clicked, setClicked] = useState(false);
 
-  console.log(clicked);
+
+  const handleClickOpen=(e)=>{
+    setClicked(!clicked)
+    document.body.classList.add('stop-scrolling') 
+  }
+  const handleClickClose=(e)=>{
+    setClicked(!clicked)
+    document.body.classList.remove('stop-scrolling') 
+  }
+  
+  console.log(height);
   return (
     <NavbarStyled>
-          <Wrapper >
+      <Wrapper>
         <nav className="NavbarItems">
           <h1 className="navbar-name">Sebastián L</h1>
-          <div className="menu-icon open" onClick={(e) => setClicked(!clicked)}>
+          <div className="menu-icon open" onClick={handleClickOpen}>
             <i className="fas fa-bars"></i>
           </div>
           <ul className={clicked ? "nav-menu active" : "nav-menu"}>
             <div
               className="menu-icon close"
-              onClick={(e) => setClicked(!clicked)}
+              onClick={handleClickClose}
             >
               <i className="fas fa-times"></i>
             </div>
             {RenderMenuItems}
           </ul>
         </nav>
-    </Wrapper>
-      </NavbarStyled>
+      </Wrapper>
+    </NavbarStyled>
   );
 };
 

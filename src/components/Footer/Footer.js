@@ -7,7 +7,6 @@ const FooterStyled = styled.div`
   color: #dadada;
   font-size: 0.9em;
   .container {
-    margin: 1em 0;
     padding: 1em;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -69,8 +68,7 @@ const Footer = () => {
             <div className="info">
               <p>
                 Thank you for taking an interest in my portfolio. If you would
-                like to talk about any of my projects, or just chat, I'd love to
-                hear from you!
+                like to talk about any of my projects, or chat, just contact me! :D
               </p>
             </div>
           </div>
@@ -84,16 +82,16 @@ const Footer = () => {
             {/*poner iconos*/}
             <h3>Social Links</h3>
             <div className="info">
-            <a href="">Github<i class="fas fa-long-arrow-alt-up"></i></a>
-              <a href="">Linkdin<i class="fas fa-long-arrow-alt-up"></i></a>
-              <a href="">Instagram<i class="fas fa-long-arrow-alt-up"></i></a>
+            <a href="https://github.com/SebastianLabadie">Github<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://www.linkedin.com/in/sebasti%C3%A1n-labadie-173902181/"> Linkdin<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://www.instagram.com/sebastianlabadie.contact/?hl=es-la">Instagram<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
           <div className="containers">
             {/*poner iconos*/}
             <h3>Resumen</h3>
             <div className="info">
-              <a href="">C.V<i class="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://drive.google.com/file/d/15UXP764q0gzRTUOb73FdUMrLruFbH-9Y/view?usp=sharing">C.V<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
         </div>

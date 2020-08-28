@@ -126,11 +126,16 @@ const AboutStyled = styled.div`
         height:88%;
       }
     }
+
     .containerInfoAndSkills {
       width:60%;
         grid-template-columns:1fr;
+        grid-gap:30px;
         margin:auto;
 
+      .title {
+        margin-top:1em;
+      }
         .containerSkills{
           margin:0 0 0 1em;
         }
@@ -162,6 +167,11 @@ const AboutStyled = styled.div`
     .containerInfoAndSkills {
       width:100%;
     }
+  }
+  @media screen and (max-width: 370px) {
+    .containerInfoAndSkills {
+        grid-gap:10px;
+        }
   }
 `;
 

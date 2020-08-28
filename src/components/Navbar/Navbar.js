@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { MenuItems } from "./MenuItems";
+import {Link} from 'react-router-dom'
 import Wrapper from "../Wrapper";
 
 let height = window.innerHeight
@@ -15,10 +16,8 @@ const NavbarStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
-    color: #fff;
   }
   .navbar-name {
-    color: #fff;
     justify-self: start;
     cursor: pointer;
     font-size: 1.2em;
@@ -34,8 +33,8 @@ const NavbarStyled = styled.div`
   }
 
   .nav-links {
+    color:#dadada;
     text-decoration: none;
-    color: #fff;
 
     &::after {
       content: "";
@@ -133,9 +132,9 @@ const NavbarStyled = styled.div`
 const RenderMenuItems = MenuItems.map((item, i) => {
   return (
     <li key={i}>
-      <a href={item.url} className={item.cName}>
+      <Link to={item.url} className={item.cName}>
         {item.title}
-      </a>
+      </Link>
     </li>
   );
 });

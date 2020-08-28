@@ -11,7 +11,7 @@ import { createStore } from "redux";
 import {
   combineForms
 } from 'react-redux-form';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch,Redirect} from "react-router-dom";
 const initialState = {
     email: "",
     message: "",
@@ -39,6 +39,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/work" component={Work} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/Portfolio" component={Home} />
         </Switch>
         <Footer />
       </Router>

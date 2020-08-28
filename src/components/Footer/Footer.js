@@ -51,7 +51,7 @@ const FooterStyled = styled.div`
   @media screen and (max-width: 500px) {
       
       .container{
-        grid-template-columns:repeat(auto-fill,70vw);
+        grid-template-columns:repeat(auto-fill,74vw);
         justify-content:center;
       }
   }

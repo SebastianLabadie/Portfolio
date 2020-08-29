@@ -3,6 +3,7 @@ import { Control, Errors, Form } from "react-redux-form";
 import Wrapper from "./Wrapper";
 import styled from "styled-components";
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 const required = (val) => val && val.length;
 const validEmail = (val) =>
@@ -213,20 +214,56 @@ const handleSendEmail2 = (val) => {
   .catch(error => console.error('Error:', error))
   .then(response => console.log('Success:', response));
 }
- 
+
+const pageVariants = {
+  inY: {
+    opacity: 1,
+    y: 0,
+  },
+  outY: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  inY2: {
+    opacity: 1,
+    y: 0,
+  },
+  outY2: {
+    opacity: 0,
+    y: "+100vh",
+  }
+};
 
   return (
     <>
       <Wrapper>
         <ContactStyled>
           <div className="container">
-            <h2 className="title">Nice to meet you</h2>
-            <p className="subTitle">
+            
+            <motion.h2 
+            initial={pageVariants.outY}
+            animate={pageVariants.inY}
+            exit={pageVariants.outY}
+            transition={{ duration: 1.5 }}
+            className="title">Nice to meet you</motion.h2>
+
+            <motion.p 
+            initial={pageVariants.outY}
+            animate={pageVariants.inY}
+            exit={pageVariants.outY}
+            transition={{ duration: 1.5 }}
+            className="subTitle">
               Please give me a few details about your thoughts. If you are a
               recruiter feel free to contact me.
-            </p>
+            </motion.p>
 
-            <Form model="formState" onSubmit={(val)=>handleSendEmail2(val)}>
+            <motion.Form 
+            initial={pageVariants.outY2}
+            animate={pageVariants.inY2}
+            exit={pageVariants.outY2}
+            transition={{ duration: 1.5 }}
+            model="formState" 
+            onSubmit={(val)=>handleSendEmail2(val)}>
               <div className="form-group">
                 <Control.text
                   model=".email"
@@ -256,7 +293,7 @@ const handleSendEmail2 = (val) => {
                   </button>
                 </div>
               </div>
-            </Form>
+            </motion.Form>
           </div>
         </ContactStyled>
       </Wrapper>

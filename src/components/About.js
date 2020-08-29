@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import styled from "styled-components";
 import profileImg from "../images/FotoCarne.jpg";
+import { motion } from "framer-motion";
 
 const height = window.innerHeight;
 const AboutStyled = styled.div`
@@ -154,7 +155,8 @@ const AboutStyled = styled.div`
     }
   }
   @media screen and (max-width: 414px) {
-    height: calc(${height}px * 1.2 );
+    height: calc(${height}px * 1.22 );
+    align-items:flex-start;
     .container{
       padding:38px;
     }
@@ -175,11 +177,28 @@ const AboutStyled = styled.div`
   }
 `;
 
+const pageVariants = {
+  inX: {
+    opacity: 1,
+    x: 0,
+  },
+  outX: {
+    opacity: 0,
+    x: "-100vw",
+  }
+};
+
+
 const About = () => {
   return (
     <Wrapper>
       <AboutStyled>
-        <div className="container">
+        <motion.div 
+        initial={pageVariants.outX}
+        animate={pageVariants.inX}
+        exit={pageVariants.outX}
+        transition={{ duration: 2 }}
+        className="container">
           <div className="containerImg">
             <img src={profileImg} alt="" />
           </div>
@@ -213,7 +232,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </AboutStyled>
     </Wrapper>
   );

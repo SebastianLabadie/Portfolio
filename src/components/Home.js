@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import asd from "../images/homeBack.png";
 import Wrapper from "./Wrapper";
+import { motion } from "framer-motion";
 
 let height = window.innerHeight;
 const HomeStyled = styled.div`
@@ -9,9 +10,9 @@ const HomeStyled = styled.div`
   height: ${height}px;
   min-height: 720px;
   background-image: url(${asd});
-  background-position: top; 
-  background-repeat: no-repeat; 
-  background-size: contain; 
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   .name {
     &:after {
@@ -63,7 +64,6 @@ const HomeStyled = styled.div`
     z-index: 90;
   }
 
-  
   @media screen and (max-width: 1080px) {
     background-size: 800px;
     .text {
@@ -96,13 +96,13 @@ const HomeStyled = styled.div`
       top: 52.5%;
     }
     .separator-one {
-        top: 43.5%;
+      top: 43.5%;
     }
     .separator-two {
       top: 43.4%;
     }
   }
- 
+
   @media screen and (max-width: 670px) {
     background-size: 600px;
     .name {
@@ -118,16 +118,15 @@ const HomeStyled = styled.div`
       font-size: 16px;
     }
     .see {
-        top: 62.5%;
+      top: 62.5%;
       width: 45.2%;
-      
     }
     .separator-one {
-        top: 52.5%;
+      top: 52.5%;
       width: 45.2%;
     }
     .separator-two {
-        top: 52.4%;
+      top: 52.4%;
       width: 45.2%;
     }
   }
@@ -168,13 +167,13 @@ const HomeStyled = styled.div`
       top: 64.5%;
     }
     .separator-one {
-      top: 57.5%
+      top: 57.5%;
     }
     .separator-two {
-      top: 57.4%
+      top: 57.4%;
     }
   }
-  
+
   @media screen and (max-width: 430px) {
     background-size: 500px;
     .text {
@@ -192,33 +191,82 @@ const HomeStyled = styled.div`
       top: 60.5%;
     }
     .separator-one {
-      top: 52.5%
+      top: 52.5%;
     }
     .separator-two {
-      top: 52.4%
+      top: 52.4%;
     }
-
   }
 `;
 
+const pageVariants = {
+  inX: {
+    opacity: 1,
+    x: 0,
+  },
+  outX: {
+    opacity: 0,
+    x: "-100vw",
+  },
+  inX2: {
+    opacity: 1,
+    x: 0,
+  },
+  outX2: {
+    opacity: 0,
+    x: "+100vw",
+  },
+  inY: {
+    opacity: 1,
+    y: 0,
+  },
+  outY: {
+    opacity: 0,
+    y: "-40px",
+  },
+};
+
 const Home = () => {
-  
   return (
     <Wrapper>
       <HomeStyled>
-        <div className="text">
+        <motion.div
+          initial={pageVariants.outX}
+          animate={pageVariants.inX}
+          exit={pageVariants.outX}
+          transition={{ duration: 2 }}
+          className="text"
+        >
           <p className="name">Hello, I'm</p>
           <p className="full">I'm a full-stack web developer.</p>
           <p className="work">
             I am currently looking for work as a MERN developer.
           </p>
-        </div>
-        <p className="see">
-          In the menu you will find my portfolio with detailed works
-        </p>
+        </motion.div>
 
-        <div className="separator-one"></div>
-        <div className="separator-two"></div>
+        <motion.p 
+        initial={pageVariants.outY} 
+        animate={pageVariants.inY} 
+        exit={pageVariants.outY}   transition={{ duration: 1 }}
+        className="see">
+          In the menu you will find my portfolio with detailed works
+        </motion.p>
+
+        <motion.div
+          initial={pageVariants.outX}
+          animate={pageVariants.inX}
+          exit={pageVariants.outX}
+          transition={{ duration: 2 }}
+          className="separator-one"
+        />
+
+        <motion.div
+          initial={pageVariants.outX2}
+          animate={pageVariants.inX2}
+          exit={pageVariants.outX2}
+          transition={{ duration:  2 }}
+          className="separator-two"
+        />
       </HomeStyled>
     </Wrapper>
   );

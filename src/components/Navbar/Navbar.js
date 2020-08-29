@@ -129,21 +129,12 @@ const NavbarStyled = styled.div`
 
 `;
 
-const RenderMenuItems = MenuItems.map((item, i) => {
-  return (
-    <li key={i}>
-      <Link to={item.url} className={item.cName}>
-        {item.title}
-      </Link>
-    </li>
-  );
-});
 
 const Navbar = () => {
-
+  
   const [clicked, setClicked] = useState(false);
-
-
+  
+  
   const handleClickOpen=(e)=>{
     setClicked(!clicked)
     document.body.classList.add('stop-scrolling') 
@@ -152,8 +143,17 @@ const Navbar = () => {
     setClicked(!clicked)
     document.body.classList.remove('stop-scrolling') 
   }
+    const RenderMenuItems = MenuItems.map((item, i) => {
+      return (
+        <li key={i}>
+          <Link onClick={e => setClicked(false)} to={item.url} className={item.cName}>
+            {item.title}
+          </Link>
+        </li>
+      );
+    });
   
-  console.log(height);
+  
   return (
     <NavbarStyled>
       <Wrapper>

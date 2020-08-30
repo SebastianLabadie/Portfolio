@@ -259,7 +259,7 @@ const pageVariants = {
   },
   outX: {
     opacity: 0,
-    x: "-100vw",
+    x: "-80vw",
   },
 };
 
@@ -271,7 +271,7 @@ const Work = () => {
           initial={pageVariants.outX}
           animate={pageVariants.inX}
           exit={pageVariants.outX}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
           className="containers"
         >
           <img src={chatIMG} alt="img" />
@@ -294,7 +294,7 @@ const Work = () => {
           initial={pageVariants.outX}
           animate={pageVariants.inX}
           exit={pageVariants.outX}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           className="containers"
         >
           <img src={notesIMG} alt="img" />
@@ -316,7 +316,7 @@ const Work = () => {
           initial={pageVariants.outX}
           animate={pageVariants.inX}
           exit={pageVariants.outX}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1.3 }}
           className="containers"
         >
           <img src={flagsIMG} alt="img" />
@@ -347,23 +347,23 @@ const Work = () => {
             </p>
           </div>
           <div className="container-git-repositories">
-            <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/01</span> TODO
+            <a href="https://github.com/SebastianLabadie/Chat-App-Demo">
+              <span>/01</span> Chat Realtime
+            </a>
+            <a href="https://github.com/SebastianLabadie/flags-project">
+              <span>/02</span> Flags Project
+            </a>
+            <a href="https://github.com/SebastianLabadie/CRUD-MERN">
+              <span>/03</span> Notes App
+            </a>
+            <a href="https://github.com/SebastianLabadie/Crud-React-Firebase">
+              <span>/04</span> Crud Firebase
             </a>
             <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/02</span> TODO
+              <span>/05</span> ToDo App
             </a>
             <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/03</span> TODO
-            </a>
-            <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/04</span> TODO
-            </a>
-            <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/05</span> TODO
-            </a>
-            <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-              <span>/06</span> TODO
+              <span>/06</span> Weather App
             </a>
           </div>
         </div>

@@ -222,7 +222,7 @@ const pageVariants = {
   },
   outY: {
     opacity: 0,
-    y: "-100vh",
+    y: "-50vh",
   },
   inY2: {
     opacity: 1,
@@ -230,7 +230,7 @@ const pageVariants = {
   },
   outY2: {
     opacity: 0,
-    y: "+100vh",
+    y: "+50vh",
   }
 };
 
@@ -244,14 +244,14 @@ const pageVariants = {
             initial={pageVariants.outY}
             animate={pageVariants.inY}
             exit={pageVariants.outY}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1 }}
             className="title">Nice to meet you</motion.h2>
 
             <motion.p 
             initial={pageVariants.outY}
             animate={pageVariants.inY}
             exit={pageVariants.outY}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1 }}
             className="subTitle">
               Please give me a few details about your thoughts. If you are a
               recruiter feel free to contact me.
@@ -261,7 +261,7 @@ const pageVariants = {
             initial={pageVariants.outY2}
             animate={pageVariants.inY2}
             exit={pageVariants.outY2}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1 }}
             model="formState" 
             onSubmit={(val)=>handleSendEmail2(val)}>
               <div className="form-group">

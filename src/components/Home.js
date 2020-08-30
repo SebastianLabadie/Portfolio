@@ -234,7 +234,7 @@ const Home = () => {
           initial={pageVariants.outX}
           animate={pageVariants.inX}
           exit={pageVariants.outX}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1.5 }}
           className="text"
         >
           <p className="name">Hello, I'm</p>
@@ -256,7 +256,7 @@ const Home = () => {
           initial={pageVariants.outX}
           animate={pageVariants.inX}
           exit={pageVariants.outX}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1.5 }}
           className="separator-one"
         />
 
@@ -264,7 +264,7 @@ const Home = () => {
           initial={pageVariants.outX2}
           animate={pageVariants.inX2}
           exit={pageVariants.outX2}
-          transition={{ duration:  2 }}
+          transition={{ duration:  1.5 }}
           className="separator-two"
         />
       </HomeStyled>

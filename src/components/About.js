@@ -184,7 +184,7 @@ const pageVariants = {
   },
   outX: {
     opacity: 0,
-    x: "-100vw",
+    x: "-90vw",
   }
 };
 
@@ -197,7 +197,7 @@ const About = () => {
         initial={pageVariants.outX}
         animate={pageVariants.inX}
         exit={pageVariants.outX}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
         className="container">
           <div className="containerImg">
             <img src={profileImg} alt="" />

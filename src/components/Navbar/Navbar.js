@@ -134,7 +134,7 @@ const Navbar = () => {
   
   const [clicked, setClicked] = useState(false);
   
-  
+    console.log(clicked)
   const handleClickOpen=(e)=>{
     setClicked(!clicked)
     document.body.classList.add('stop-scrolling') 
@@ -145,7 +145,7 @@ const Navbar = () => {
   }
   const handleClickLink=()=>{
     setClicked(false)
-    handleClickClose()
+    document.body.classList.remove('stop-scrolling') 
   }
     const RenderMenuItems = MenuItems.map((item, i) => {
       return (

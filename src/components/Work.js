@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImg from "../images/asd.png";
-import backgroundImg2 from "../images/asd2.png";
+import flagsIMG from "../images/flagsIMG.png";
+import chatIMG from "../images/chatIMG.jpg";
+import notesIMG from "../images/notesIMG.JPG";
 import Wrapper from "./Wrapper";
 import moduleName from "module";
 import { motion } from "framer-motion";
@@ -19,7 +20,6 @@ const WorkStyled = styled.div`
       height: 460px;
       outline: none;
       border-radius: 10px;
-      /*  background:url(${backgroundImg}) center center/cover; */
     }
     .title {
       margin-bottom: 15px;
@@ -274,7 +274,7 @@ const Work = () => {
           transition={{ duration: 1 }}
           className="containers"
         >
-          <img src={backgroundImg} alt="img" />
+          <img src={chatIMG} alt="img" />
           <div className="info">
             <h2 className="title">Chat Realtime App </h2>
             <p>
@@ -297,7 +297,7 @@ const Work = () => {
           transition={{ duration: 1.5 }}
           className="containers"
         >
-          <img src={backgroundImg} alt="img" />
+          <img src={notesIMG} alt="img" />
           <div className="info">
             <h2 className="title">Notes App</h2>
             <p>
@@ -305,7 +305,7 @@ const Work = () => {
               users, in turn they can create, update and delete notes.
             </p>
             <p className="demo">
-              You can see the demo here: <a href="https://sebastianlabadie.github.io/flags-project/">Link</a>
+              You can see the demo here: <a href="#">Link</a>
             </p>
             <p>What i use for this?</p>
             <p className="frontend2">Frontend: React, Bootstrap, Axios </p>
@@ -319,7 +319,7 @@ const Work = () => {
           transition={{ duration: 2 }}
           className="containers"
         >
-          <img src={backgroundImg} alt="img" />
+          <img src={flagsIMG} alt="img" />
           <div className="info">
             <h2 className="title">Flag Project</h2>
             <p>
@@ -328,7 +328,7 @@ const Work = () => {
               api.
             </p>
             <p className="demo">
-              You can see the demo here: <a href="#">Link</a>
+              You can see the demo here: <a href="https://sebastianlabadie.github.io/flags-project/">Link</a>
             </p>
             <p>What i use for this?</p>
             <p className="frontend3">Frontend: React, Redux, Fetch, Styled Components </p>

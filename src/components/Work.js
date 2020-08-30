@@ -39,7 +39,7 @@ const WorkStyled = styled.div`
         a {
           cursor: pointer;
           text-decoration: none;
-          color: #00f;
+          color: rgb(224, 80, 80);
         }
       }
     }
@@ -88,7 +88,7 @@ const WorkStyled = styled.div`
           margin-left: 6px;
           cursor: pointer;
           text-decoration: none;
-          color: #00f;
+          color: rgb(224, 80, 80);
         }
       }
       .title {
@@ -107,7 +107,7 @@ const WorkStyled = styled.div`
       a {
         cursor: pointer;
         text-decoration: none;
-        color: #00f;
+        color: rgb(224, 80, 80);
       }
     }
   }
@@ -283,7 +283,7 @@ const Work = () => {
               api.
             </p>
             <p className="demo">
-              You can see the demo here: <a href="#">Link</a>
+              You can see the demo here: <a href="https://5f44364e080d4011818966ae--stupefied-montalcini-36e166.netlify.app/">Link</a>
             </p>
             <p>What i use for this?</p>
             <p className="frontend1">Frontend: React </p>

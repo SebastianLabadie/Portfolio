@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import asd from "../images/homeBack.png";
+import backgroundImg from "../images/homeBack.png";
 import Wrapper from "./Wrapper";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ const HomeStyled = styled.div`
   position: relative;
   height: ${height}px;
   min-height: 720px;
-  background-image: url(${asd});
+  background-image: url(${backgroundImg});
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;

@@ -143,10 +143,14 @@ const Navbar = () => {
     setClicked(!clicked)
     document.body.classList.remove('stop-scrolling') 
   }
+  const handleClickLink=()=>{
+    setClicked(false)
+    handleClickClose()
+  }
     const RenderMenuItems = MenuItems.map((item, i) => {
       return (
         <li key={i}>
-          <Link onClick={e => setClicked(false)} to={item.url} className={item.cName}>
+          <Link onClick={handleClickLink} to={item.url} className={item.cName}>
             {item.title}
           </Link>
         </li>

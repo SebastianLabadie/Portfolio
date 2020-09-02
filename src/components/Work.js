@@ -179,8 +179,7 @@ const WorkStyled = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    margin: 0 1em;
-    padding: 42px;
+    margin: 2em 1.2rem;
     .containers {
       flex-direction: column;
       img {
@@ -362,7 +361,7 @@ const Work = () => {
             <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
               <span>/05</span> ToDo App
             </a>
-            <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
+            <a href="https://github.com/SebastianLabadie/weather-app">
               <span>/06</span> Weather App
             </a>
           </div>

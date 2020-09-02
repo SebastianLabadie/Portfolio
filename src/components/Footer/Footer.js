@@ -7,7 +7,7 @@ const FooterStyled = styled.div`
   color: #dadada;
   font-size: 0.9em;
   .container {
-    padding: 1em;
+    padding: 1.2rem;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-gap: 6.2em;
@@ -52,7 +52,7 @@ const FooterStyled = styled.div`
       
       .container{
         grid-template-columns:repeat(auto-fill,74vw);
-        justify-content:center;
+        justify-content:left;
       }
   }
 

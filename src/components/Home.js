@@ -27,7 +27,7 @@ const HomeStyled = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     top: 25%;
-    left: 16px;
+    left: 1.2rem;
     font-size: 70px;
     width: 98%;
   }
@@ -183,7 +183,7 @@ const HomeStyled = styled.div`
       width: 45.2%;
     }
     .separator-two {
-      width: 45.2%;
+      width: 45.1%;
     }
   }
   @media screen and (max-width: 413px) {

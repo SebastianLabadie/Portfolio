@@ -6,7 +6,7 @@ import Wrapper from "../Wrapper";
 
 let height = window.innerHeight
 const NavbarStyled = styled.div`
-
+ 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   .NavbarItems {
     margin:0 1em;
@@ -61,11 +61,7 @@ const NavbarStyled = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    .NavbarItems {
-      
-      padding: 2em;
-    }
-
+    
     .nav-menu {
       display: flex;
       flex-direction: column;
@@ -76,6 +72,7 @@ const NavbarStyled = styled.div`
       left: -200vw;
       width: 100vw;
       height: 100%;
+      max-height:100vh;
       background: rgba(19, 20, 20, 1);
       opacity: 1;
       z-index: 100;
@@ -96,8 +93,8 @@ const NavbarStyled = styled.div`
     }
     .close {
       position: absolute;
-      top: 1.3em;
-      right: 1.4em;
+      top:2.5vh;
+      right:3vw;
     }
     li {
       margin: 25px;
@@ -107,21 +104,16 @@ const NavbarStyled = styled.div`
     }
   }
 
-  @media screen and (max-width: 800px) {
-    .close{
-      top:0.8em;
-      right:2em;
-    }
     
-  }
+  
   @media screen and (max-width: 479px) {
     .close{
-      top:1em;
+     right:5vw;; 
     }
   }
   @media screen and (max-width: 414px) {
     .close{
-      top:0.9em;
+      right:6vw;;
     }
   }
 

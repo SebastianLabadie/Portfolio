@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 
 const height = window.innerHeight;
 const AboutStyled = styled.div`
-  height: ${height}px;
-
+  min-width:100vw;
   margin: 3em 1em;
   display: flex;
   align-items: center;
@@ -24,7 +23,7 @@ const AboutStyled = styled.div`
     display: flex;
     img {
       height: 100%;
-      width: 50%;
+       width: 550px; 
       margin: auto;
       border-radius: 10px;
       border: none;
@@ -37,6 +36,7 @@ const AboutStyled = styled.div`
     width: 80%;
     height: 100%;
     justify-content: center;
+    margin:2em 0;
   }
   .containerInfoAndSkills {
     display: grid;
@@ -77,7 +77,10 @@ const AboutStyled = styled.div`
     .container {
       width: 90%;
       height: 92%;
-    }
+       img {
+        width:380px;
+    } 
+
     .containerInfoAndSkills {
       .title {
         font-size: 30px;
@@ -93,13 +96,16 @@ const AboutStyled = styled.div`
       }
     }
   }
-
+}
   @media screen and (max-width: 940px) {
     margin: 0;
 
     .container {
       width: 100%;
       height: 80%;
+      img{
+        height: 85%;
+      }
     }
     .containerInfoAndSkills {
       .title {
@@ -107,7 +113,7 @@ const AboutStyled = styled.div`
         text-align: center;
       }
       .containerInfo {
-        margin: 0 0 0 1em;
+        margin: 0 0 0 1.2rem;
       }
       .info {
         font-size: 16px;
@@ -120,11 +126,11 @@ const AboutStyled = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    height: calc(${height}px * 1.4 );
     .containerImg {
       height: 44%;
       img{
         height:88%;
+        width:350px;
       }
     }
 
@@ -138,41 +144,63 @@ const AboutStyled = styled.div`
         margin-top:1em;
       }
         .containerSkills{
-          margin:0 0 0 1em;
+          margin:0 0 0 1.2rem;
         }
     }
   }
   @media screen and (max-width: 578px) {
-    height: calc(${height}px * 1.4 );
     .containerImg {
       height: 36%;
       img{
         height:88%;
+        width:310px;
       }
     }
+    
     .containerInfoAndSkills {
-      width:100%;
+      width:96%;
+      .containerInfo {
+        margin: 0 0 0 .5rem;
+      }
+      .containerSkills{
+          margin:0 0 0 .5rem;
+        }
     }
   }
-  @media screen and (max-width: 414px) {
-    height: calc(${height}px * 1.22 );
-    align-items:flex-start;
-    .container{
-      padding:38px;
+  @media screen and (max-width: 490px) {
+      .containerInfoAndSkills {
+        .containerInfo {
+        margin: 0 0 0 .9rem;
+      }
+      .containerSkills{
+          margin:0 0 0 .9rem;
+        }
+      }
     }
+  @media screen and (max-width: 414px) {
+    align-items:flex-start;
+   
     .containerImg {
       height: 36%;
       img{
-        width:68%;
+        width:270px;
       }
+      .containerInfoAndSkills {
+        .containerInfo {
+        margin: 0 0 0 1.2rem;
+      }
+      .containerSkills{
+          margin:0 0 0 1.2rem;
+        }
+      }
+      
     }
-    .containerInfoAndSkills {
-      width:100%;
-    }
+    
   }
   @media screen and (max-width: 370px) {
     .containerInfoAndSkills {
-        grid-gap:10px;
+      
+        grid-gap:20px;
         }
   }
 `;

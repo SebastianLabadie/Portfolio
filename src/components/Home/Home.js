@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImg from "../images/homeBack.png";
-import Wrapper from "./Wrapper";
+import backgroundImg from "../../images/homeBack.png";
+import Wrapper from "../Wrapper";
 import { motion } from "framer-motion";
+import Separator from './Separator'  
 
 let height = window.innerHeight;
 const HomeStyled = styled.div`
@@ -45,24 +46,7 @@ const HomeStyled = styled.div`
     position: relative;
     top: 56%;
   }
-  .separator-one {
-    position: relative;
-    top: 50%;
-    left: 16px;
-    height: 1px;
-    width: 48.2%;
-    background: rgb(255, 70, 70);
-    z-index: 90;
-  }
-  .separator-two {
-    position: relative;
-    top: 49.9%;
-    left: 50.5%;
-    height: 1px;
-    width: 48.2%;
-    background: rgb(255, 70, 70);
-    z-index: 90;
-  }
+  
 
   @media screen and (max-width: 1080px) {
     background-size: 800px;
@@ -84,22 +68,10 @@ const HomeStyled = styled.div`
     .see {
       width: 47.2%;
     }
-    .separator-one {
-      width: 46.2%;
-    }
-    .separator-two {
-      width: 46.2%;
-    }
   }
   @media screen and (max-width: 720px) {
     .see {
       top: 52.5%;
-    }
-    .separator-one {
-      top: 43.5%;
-    }
-    .separator-two {
-      top: 43.4%;
     }
   }
 
@@ -116,17 +88,7 @@ const HomeStyled = styled.div`
     }
     .see {
       font-size: 16px;
-    }
-    .see {
       top: 62.5%;
-      width: 45.2%;
-    }
-    .separator-one {
-      top: 52.5%;
-      width: 45.2%;
-    }
-    .separator-two {
-      top: 52.4%;
       width: 45.2%;
     }
   }
@@ -134,22 +96,10 @@ const HomeStyled = styled.div`
     .see {
       top: 56.5%;
     }
-    .separator-one {
-      top: 49.5%;
-    }
-    .separator-two {
-      top: 49.4%;
-    }
   }
   @media screen and (max-width: 501px) {
     .see {
       top: 51.5%;
-    }
-    .separator-one {
-      top: 43.5%;
-    }
-    .separator-two {
-      top: 43.4%;
     }
   }
   @media screen and (max-width: 480px) {
@@ -166,12 +116,6 @@ const HomeStyled = styled.div`
       font-size: 14px;
       top: 64.5%;
     }
-    .separator-one {
-      top: 57.5%;
-    }
-    .separator-two {
-      top: 57.4%;
-    }
   }
 
   @media screen and (max-width: 430px) {
@@ -179,22 +123,10 @@ const HomeStyled = styled.div`
     .text {
       top: 22%;
     }
-    .separator-one {
-      width: 45.2%;
-    }
-    .separator-two {
-      width: 45.1%;
-    }
   }
   @media screen and (max-width: 413px) {
     .see {
       top: 60.5%;
-    }
-    .separator-one {
-      top: 52.5%;
-    }
-    .separator-two {
-      top: 52.4%;
     }
   }
 `;
@@ -207,14 +139,6 @@ const pageVariants = {
   outX: {
     opacity: 0,
     x: "-100vw",
-  },
-  inX2: {
-    opacity: 1,
-    x: 0,
-  },
-  outX2: {
-    opacity: 0,
-    x: "+100vw",
   },
   inY: {
     opacity: 1,
@@ -252,21 +176,9 @@ const Home = () => {
           In the menu you will find my portfolio with detailed works
         </motion.p>
 
-        <motion.div
-          initial={pageVariants.outX}
-          animate={pageVariants.inX}
-          exit={pageVariants.outX}
-          transition={{ duration: 1.5 }}
-          className="separator-one"
-        />
-
-        <motion.div
-          initial={pageVariants.outX2}
-          animate={pageVariants.inX2}
-          exit={pageVariants.outX2}
-          transition={{ duration:  1.5 }}
-          className="separator-two"
-        />
+        <Separator name="one"/>
+        <Separator name="two"/>
+        
       </HomeStyled>
     </Wrapper>
   );

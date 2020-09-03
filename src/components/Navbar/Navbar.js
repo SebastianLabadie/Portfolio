@@ -4,7 +4,6 @@ import { MenuItems } from "./MenuItems";
 import {Link} from 'react-router-dom'
 import Wrapper from "../Wrapper";
 
-let height = window.innerHeight
 const NavbarStyled = styled.div`
  
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -126,7 +125,7 @@ const Navbar = () => {
   
   const [clicked, setClicked] = useState(false);
   
-    console.log(clicked)
+    
   const handleClickOpen=(e)=>{
     setClicked(!clicked)
     document.body.classList.add('stop-scrolling') 

@@ -1,7 +1,7 @@
 # Portfolio
 Thanks for looking and being interested in my profile.
 You can see my portfolio here:
-Visit <https://sebastianlabadie.github.io/Portfolio>
+<https://sebastianlabadie.github.io/Portfolio>
 
 ![](screenshot.png)
 

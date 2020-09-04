@@ -2,7 +2,12 @@ import React from "react";
 import { Control, Errors, Form } from "react-redux-form";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import { actions } from 'react-redux-form'
+import {useDispatch} from 'react-redux'
 import Button from "./Button";
+
+toast.configure()
 const required = (val) => val && val.length;
 const validEmail = (val) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
@@ -34,13 +39,18 @@ const FormStyled = styled(motion.div)`
       height: 160px;
     }
   }
-
+  .text-danger{
+    color:#e05050;
+  }
   @media screen and (max-width: 920px) {
     .form-group {
       .form-control {
         font-size: 16px;
       }
     }
+    .text-danger{
+      font-size: 16px;
+  }
   }
 
   @media screen and (max-width: 773px) {
@@ -49,6 +59,9 @@ const FormStyled = styled(motion.div)`
         font-size: 15px;
       }
     }
+    .text-danger{
+      font-size: 15px;
+  }
   }
 
   @media screen and (max-width: 697px) {
@@ -57,10 +70,15 @@ const FormStyled = styled(motion.div)`
         font-size: 14px;
       }
     }
+    .text-danger{
+      font-size: 14px;
+  }
   }
 `;
 
 const FormCustom = () => {
+  const dis=useDispatch()
+
   let data = {
     service_id: "default_service",
     template_id: "template_WyUXuOTf",
@@ -81,10 +99,36 @@ const FormCustom = () => {
       },
     })
       .then((res) => res)
-      .catch((error) => console.error("Error:", error))
-      .then((response) => console.log("Success:", response));
-  };
+      .catch((error) => {
+        console.error("Error:", error)
+        toast("Error to send email ", {
+          type: "error",
+          position: "top-right",
+          autoClose: 1800,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      })
 
+      .then((response) =>{
+        console.log("Succefully:", response)
+        dis(actions.reset('formState'))
+         toast("Email send sucessfully", {
+          type: "success",
+          position: "top-right",
+          autoClose: 1800,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+ 
   const pageVariants = {
     inY: {
       opacity: 1,
@@ -98,6 +142,7 @@ const FormCustom = () => {
 
   return (
     <FormStyled>
+      
       <Form model="formState" onSubmit={(val) => handleSendEmail(val)}>
         <motion.div
           initial={pageVariants.outY}
@@ -105,6 +150,7 @@ const FormCustom = () => {
           exit={pageVariants.outY}
           transition={{ duration: 1 }}
           className="form-group"
+
         >
           <Control.text
             model=".email"
@@ -112,7 +158,19 @@ const FormCustom = () => {
             name="email"
             placeholder="Your E-mail"
             className="form-control input"
+            validators={{
+              required, validEmail
+          }}
           />
+          <Errors
+          className="text-danger"
+          model=".email"
+          show="touched"
+          messages={{
+            required: 'Required',
+              validEmail: 'Invalid Email Address'
+          }}/>
+           
         </motion.div>
         <motion.div
           initial={pageVariants.outY}

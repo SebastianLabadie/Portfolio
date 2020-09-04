@@ -1,5 +1,4 @@
 import React from "react";
-import { Control, Errors, Form } from "react-redux-form";
 import Wrapper from "../Wrapper";
 import styled from "styled-components";
 import { motion } from "framer-motion";

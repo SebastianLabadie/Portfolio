@@ -17,5 +17,10 @@ body{
       height: 100%; 
       overflow: hidden; 
   } 
-
- 
+  
+  .Toastify__toast-container--top-right{
+    top:10vh !important;
+  }
+  .Toastify__toast--error {
+    background: #e05050;
+  }

@@ -7,6 +7,7 @@ import { createStore } from "redux";
 import {combineForms} from 'react-redux-form';
 import { BrowserRouter as Router,} from "react-router-dom";
 
+
 const initialState = {
     email: "",
     message: "",
@@ -16,6 +17,7 @@ const initialState = {
 const store = createStore(combineForms({
   formState: initialState,
 }));
+
 
 
 ReactDOM.render(

@@ -36,7 +36,7 @@ const Work = () => {
        users, in turn they can create, update and delete notes.'
        projectFrontend='React, Bootstrap, Axios'
        projectBackend='Node, Express, Mongodb '
-       projectLink='#'
+       projectLink='https://sebastianlabadie.github.io/CRUD-MERN/'
        />
        <WorkProjectsLayout
        transitionDuration={1.3}

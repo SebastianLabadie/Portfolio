@@ -51,7 +51,7 @@ const WorkProjectsLayoutStyled = styled(motion.div)`
         projectName.includes("Chat")
           ? "'(deploy: Heroku)'"
           : projectName.includes("Note")
-          ? "'(deploy: Mlab,Heroku)'"
+          ? "'(deploy: Atlas,Heroku)'"
           : "'none'"};
       color: rgb(224, 80, 80);
     }

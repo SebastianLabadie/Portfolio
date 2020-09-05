@@ -33,6 +33,7 @@ const WorkProjectsLayoutStyled = styled(motion.div)`
         cursor: pointer;
         text-decoration: none;
         color: rgb(224, 80, 80);
+        margin-left:5px;
       }
     }
   }

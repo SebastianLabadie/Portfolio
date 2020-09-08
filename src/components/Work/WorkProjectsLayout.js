@@ -39,21 +39,13 @@ const WorkProjectsLayoutStyled = styled(motion.div)`
   }
   .frontend {
     &:after {
-      content: ${({ projectName }) =>
-        projectName.includes("Chat")
-          ? "'(deploy: Netlify)'"
-          : "'(deploy: Github Pages)'"};
+      content:${({projectDeployFrontend})=> "'"+projectDeployFrontend+"'"};
       color: rgb(224, 80, 80);
     }
   }
   .backend {
     &:after {
-      content: ${({ projectName }) =>
-        projectName.includes("Chat")
-          ? "'(deploy: Heroku)'"
-          : projectName.includes("Note")
-          ? "'(deploy: Atlas,Heroku)'"
-          : "'none'"};
+      content:${({projectDeployBackend})=> "'"+projectDeployBackend+"'"};
       color: rgb(224, 80, 80);
     }
   }
@@ -142,6 +134,8 @@ const WorkProjectsLayout = ({
   projectDetail,
   projectFrontend,
   projectBackend,
+  projectDeployFrontend='',
+  projectDeployBackend='',
   projectLink,
 }) => {
   const pageVariants = {
@@ -154,14 +148,14 @@ const WorkProjectsLayout = ({
       x: "-80vw",
     },
   };
-  
   return (
     <WorkProjectsLayoutStyled
       initial={pageVariants.outX}
       animate={pageVariants.inX}
       exit={pageVariants.outX}
       transition={{ duration: transitionDuration }}
-      projectName={projectName}
+      projectDeployFrontend={projectDeployFrontend}
+      projectDeployBackend={projectDeployBackend}
     >
       <img src={require(`../../images/${projectName}.jpg`)} alt="img" />
       <div className="info">

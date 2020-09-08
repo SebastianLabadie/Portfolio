@@ -114,14 +114,14 @@ const WorkGitInfo = () => {
         <a href="https://github.com/SebastianLabadie/CRUD-MERN">
           <span>/03</span> Notes App
         </a>
-        <a href="https://github.com/SebastianLabadie/Crud-React-Firebase">
-          <span>/04</span> Crud Firebase
-        </a>
-        <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-          <span>/05</span> ToDo App
+        <a href="https://github.com/SebastianLabadie/react-whatsapp-clone">
+          <span>/04</span> Whatsapp Clone
         </a>
         <a href="https://github.com/SebastianLabadie/weather-app">
-          <span>/06</span> Weather App
+          <span>/05</span> Weather App
+        </a>
+        <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
+          <span>/06</span> ToDo App
         </a>
       </div>
     </WorkGitInfotStyled>

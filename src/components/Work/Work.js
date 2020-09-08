@@ -26,6 +26,8 @@ const Work = () => {
        api."
           projectFrontend="React"
           projectBackend="Node, Express, Socket.io"
+          projectDeployFrontend="(deploy: Netlify)"
+          projectDeployBackend="(deploy: Herkou)"
           projectLink="https://5f44364e080d4011818966ae--stupefied-montalcini-36e166.netlify.app/"
         />
         <WorkProjectsLayout
@@ -33,7 +35,8 @@ const Work = () => {
           projectName="Flag Project"
           projectDetail="The purpose of this application is to be able to search the most relevant information of each country, created with restcountries api."
           projectFrontend="React, Redux, Fetch, Styled Components"
-          projectBackend=""
+          projectDeployFrontend="(deploy: Github Pages)"
+          projectDeployBackend="none"
           projectLink="https://sebastianlabadie.github.io/flags-project/"
         />
         <WorkProjectsLayout
@@ -42,7 +45,19 @@ const Work = () => {
           projectDetail="This is an application in which you can create, update and delete users, in turn they can create, update and delete notes."
           projectFrontend="React, Bootstrap, Axios"
           projectBackend="Node, Express, Mongodb "
+          projectDeployFrontend="(deploy: Github Pages)"
+          projectDeployBackend="(deploy: Atlas,Heroku)"
           projectLink="https://sebastianlabadie.github.io/CRUD-MERN/"
+        />
+        <WorkProjectsLayout
+          transitionDuration={1.5}
+          projectName="Whatsapp Clone"
+          projectDetail="This is wpp web clone, you can login and chat in realtime in a room."
+          projectFrontend="React, MaterialUI, Axios,Styled Components"
+          projectBackend="Node, Express, Mongodb,Firebase "
+          projectDeployFrontend="(deploy: Netlify)"
+          projectDeployBackend="(deploy: Atlas,Heroku)"
+          projectLink="https://wpp-clone.netlify.app/"
         />
         <WorkGitInfo />
       </WorkStyled>

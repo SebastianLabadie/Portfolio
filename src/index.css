@@ -12,6 +12,10 @@ body{
   font-weight: 700;
 }
 
+#root{
+  overflow:hidden;
+}
+
 
   .stop-scrolling { 
       height: 100%; 

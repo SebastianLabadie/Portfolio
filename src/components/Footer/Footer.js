@@ -84,7 +84,7 @@ const Footer = () => {
             <div className="info">
             <a href="https://github.com/SebastianLabadie">Github<i className="fas fa-long-arrow-alt-up"></i></a>
               <a href="https://www.linkedin.com/in/sebasti%C3%A1n-labadie-173902181/"> Linkdin<i className="fas fa-long-arrow-alt-up"></i></a>
-              <a href="https://www.instagram.com/sebastianlabadie.contact/?hl=es-la">Instagram<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://www.instagram.com/sebastian._.labadie/?hl=es-la">Instagram<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
           <div className="containers">

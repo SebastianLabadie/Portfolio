@@ -9,7 +9,7 @@ let height = window.innerHeight;
 const HomeStyled = styled.div`
   position: relative;
   height: ${height}px;
-  min-height: 720px;
+  min-height: 700px;
   background-image: url(${backgroundImg});
   background-position: top;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@ const HomeStyled = styled.div`
     top: 25%;
     left: 1.2rem;
     font-size: 70px;
-    width: 98%;
+    width: 96%;
   }
   .work {
     font-size: 24px;

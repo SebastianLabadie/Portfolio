@@ -88,7 +88,7 @@ const LayoutInfoAndSkillsStyled = styled.div`
     }
   }
   @media screen and (max-width: 578px) {
-    width: 96%;
+    width: 95%;
     .containerInfo {
       margin: 0 0 0 0.5rem;
     }

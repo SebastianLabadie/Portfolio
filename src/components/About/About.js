@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import LayoutInfoAndSkills from './LayoutInfoAndSkills'
 const AboutStyled = styled.div`
   min-width:100vw;
-  margin: 3em 1em;
+  margin: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ const AboutStyled = styled.div`
     width: 80%;
     height: 100%;
     justify-content: center;
-    margin:2em 0;
+    margin:1em 0;
   }
   
 
@@ -45,7 +45,7 @@ const AboutStyled = styled.div`
       width: 90%;
       height: 92%;
        img {
-        width:380px;
+        width:420px;
     } 
 
   }

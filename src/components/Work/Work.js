@@ -20,18 +20,26 @@ const Work = () => {
       <WorkStyled>
         <WorkProjectsLayout
           transitionDuration={0.7}
-          projectName="Chat Realtime App"
-          projectDetail="This is an application in which you can create a room to talk in
-       real time with friends or colleagues, it is made with socket.io
-       api."
-          projectFrontend="React"
-          projectBackend="Node, Express, Socket.io"
+          projectName="Amazon Clone"
+          projectDetail="This is an Amazon clone app, you can login-logout, buy products and view the basket, all dynamic using Context api"
+          projectFrontend="React,Styled-Components,MaterialUI,Context"
+          projectBackend="Firebase"
           projectDeployFrontend="(deploy: Netlify)"
-          projectDeployBackend="(deploy: Herkou)"
-          projectLink="https://5f44364e080d4011818966ae--stupefied-montalcini-36e166.netlify.app/"
+          projectDeployBackend=""
+          projectLink="https://amazon-clone99.netlify.app/"
         />
+          <WorkProjectsLayout
+            transitionDuration={1}
+            projectName="Whatsapp Clone"
+            projectDetail="This is wpp web clone, you can login and chat in realtime in a room."
+            projectFrontend="React, MaterialUI, Axios,Styled Components"
+            projectBackend="Node, Express, Mongodb,Firebase "
+            projectDeployFrontend="(deploy: Netlify)"
+            projectDeployBackend="(deploy: Atlas,Heroku)"
+            projectLink="https://wpp-clone.netlify.app/"
+          />
         <WorkProjectsLayout
-          transitionDuration={1}
+          transitionDuration={1.3}
           projectName="Flag Project"
           projectDetail="The purpose of this application is to be able to search the most relevant information of each country, created with restcountries api."
           projectFrontend="React, Redux, Fetch, Styled Components"
@@ -40,7 +48,7 @@ const Work = () => {
           projectLink="https://sebastianlabadie.github.io/flags-project/"
         />
         <WorkProjectsLayout
-          transitionDuration={1.3}
+          transitionDuration={1.5}
           projectName="Notes App"
           projectDetail="This is an application in which you can create, update and delete users, in turn they can create, update and delete notes."
           projectFrontend="React, Bootstrap, Axios"
@@ -48,16 +56,6 @@ const Work = () => {
           projectDeployFrontend="(deploy: Github Pages)"
           projectDeployBackend="(deploy: Atlas,Heroku)"
           projectLink="https://sebastianlabadie.github.io/CRUD-MERN/"
-        />
-        <WorkProjectsLayout
-          transitionDuration={1.5}
-          projectName="Whatsapp Clone"
-          projectDetail="This is wpp web clone, you can login and chat in realtime in a room."
-          projectFrontend="React, MaterialUI, Axios,Styled Components"
-          projectBackend="Node, Express, Mongodb,Firebase "
-          projectDeployFrontend="(deploy: Netlify)"
-          projectDeployBackend="(deploy: Atlas,Heroku)"
-          projectLink="https://wpp-clone.netlify.app/"
         />
         <WorkGitInfo />
       </WorkStyled>

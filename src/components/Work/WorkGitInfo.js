@@ -105,8 +105,8 @@ const WorkGitInfo = () => {
         </p>
       </div>
       <div className="container-git-repositories">
-        <a href="https://github.com/SebastianLabadie/Chat-App-Demo">
-          <span>/01</span> Chat Realtime
+        <a href="https://github.com/SebastianLabadie/react-amazon-clone">
+          <span>/01</span> Amazon Clone 
         </a>
         <a href="https://github.com/SebastianLabadie/flags-project">
           <span>/02</span> Flags Project
@@ -120,8 +120,8 @@ const WorkGitInfo = () => {
         <a href="https://github.com/SebastianLabadie/weather-app">
           <span>/05</span> Weather App
         </a>
-        <a href="https://sebastianlabadie.github.io/react-todo-list-app/">
-          <span>/06</span> ToDo App
+        <a href="https://github.com/SebastianLabadie/Chat-App-Demo">
+          <span>/06</span> Chat Realtime
         </a>
       </div>
     </WorkGitInfotStyled>

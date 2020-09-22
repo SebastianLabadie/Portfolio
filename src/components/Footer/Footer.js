@@ -82,16 +82,16 @@ const Footer = () => {
             {/*poner iconos*/}
             <h3>Social Links</h3>
             <div className="info">
-            <a href="https://github.com/SebastianLabadie">Github<i className="fas fa-long-arrow-alt-up"></i></a>
-              <a href="https://www.linkedin.com/in/sebasti%C3%A1n-labadie-173902181/"> Linkdin<i className="fas fa-long-arrow-alt-up"></i></a>
-              <a href="https://www.instagram.com/sebastian._.labadie/?hl=es-la">Instagram<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://github.com/SebastianLabadie" target="_blank" rel="noopener noreferrer">Github<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://www.linkedin.com/in/sebasti%C3%A1n-labadie-173902181/" target="_blank" rel="noopener noreferrer"> Linkdin<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://www.instagram.com/sebastian._.labadie/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
           <div className="containers">
             {/*poner iconos*/}
             <h3>Resumen</h3>
             <div className="info">
-              <a href="https://drive.google.com/file/d/15UXP764q0gzRTUOb73FdUMrLruFbH-9Y/view?usp=sharing">C.V<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://drive.google.com/file/d/15UXP764q0gzRTUOb73FdUMrLruFbH-9Y/view?usp=sharing" target="_blank" rel="noopener noreferrer">C.V<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
         </div>

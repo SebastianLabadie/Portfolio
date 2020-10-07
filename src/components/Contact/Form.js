@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { actions } from 'react-redux-form'
 import {useDispatch} from 'react-redux'
 import Button from "./Button";
+import {useIntl} from 'react-intl'
 
 toast.configure()
 const required = (val) => val && val.length;
@@ -139,7 +140,7 @@ const FormCustom = () => {
       y: "+50vh",
     },
   };
-
+  const intl=useIntl()
   return (
     <FormStyled>
       
@@ -156,7 +157,7 @@ const FormCustom = () => {
             model=".email"
             id="email"
             name="email"
-            placeholder="Your E-mail"
+            placeholder={intl.messages["contact.form.inputPlace"]}
             className="form-control input"
             validators={{
               required, validEmail
@@ -167,8 +168,8 @@ const FormCustom = () => {
           model=".email"
           show="touched"
           messages={{
-            required: 'Required',
-              validEmail: 'Invalid Email Address'
+            required: intl.messages["contact.form.emailRequired"],
+              validEmail: intl.messages["contact.form.emailInvalid"]
           }}/>
            
         </motion.div>
@@ -184,7 +185,7 @@ const FormCustom = () => {
               model=".message"
               id="message"
               name="message"
-              placeholder="Say something..."
+              placeholder={intl.messages["contact.form.areaPlace"]}
               rows="12"
               className="form-control textArea"
             />
@@ -192,7 +193,7 @@ const FormCustom = () => {
         </motion.div>
         <div className="form-group">
           <div>
-            <Button>Send Message</Button>
+            <Button>{intl.messages["contact.form.btn"]}</Button>
           </div>
         </div>
       </Form>

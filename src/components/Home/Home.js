@@ -4,6 +4,7 @@ import backgroundImg from "../../images/homeBack.png";
 import Wrapper from "../Wrapper";
 import { motion } from "framer-motion";
 import Separator from './Separator'  
+import {useIntl} from 'react-intl'
 
 let height = window.innerHeight;
 const HomeStyled = styled.div`
@@ -151,6 +152,7 @@ const pageVariants = {
 };
 
 const Home = () => {
+  const intl=useIntl()
   return (
     <Wrapper>
       <HomeStyled>
@@ -161,10 +163,10 @@ const Home = () => {
           transition={{ duration: 1.5 }}
           className="text"
         >
-          <p className="name">Hello, I'm</p>
-          <p className="full">I'm a full-stack web developer.</p>
+          <p className="name">{intl.messages['home.name']}</p>
+          <p className="full">{intl.messages['home.full']}</p>
           <p className="work">
-            I am currently looking for work as a MERN developer.
+          {intl.messages['home.work']}
           </p>
         </motion.div>
 
@@ -173,7 +175,7 @@ const Home = () => {
         animate={pageVariants.inY} 
         exit={pageVariants.outY}   transition={{ duration: 1 }}
         className="see">
-          In the menu you will find my portfolio with detailed works
+          {intl.messages['home.see']}
         </motion.p>
 
         <Separator name="one"/>

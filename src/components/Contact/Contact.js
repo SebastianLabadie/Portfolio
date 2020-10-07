@@ -3,6 +3,7 @@ import Wrapper from "../Wrapper";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import FormCustom from "./Form";
+import {useIntl} from 'react-intl'
 
 const height = window.innerHeight;
 const ContactStyled = styled.div`
@@ -105,7 +106,7 @@ const Contact = () => {
       y: "-50vh",
     },
   };
-
+  const intl=useIntl()
   return (
     <>
       <Wrapper>
@@ -118,7 +119,7 @@ const Contact = () => {
               transition={{ duration: 1 }}
               className="title"
             >
-              Nice to meet you
+              {intl.messages["contact.title"]}
             </motion.h2>
 
             <motion.p
@@ -128,8 +129,7 @@ const Contact = () => {
               transition={{ duration: 1 }}
               className="subTitle"
             >
-              Please give me a few details about your thoughts. If you are a
-              recruiter feel free to contact me.
+                {intl.messages["contact.subTitle"]}
             </motion.p>
 
             <FormCustom />

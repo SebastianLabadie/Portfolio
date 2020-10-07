@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MenuItems } from "./MenuItems";
 import {Link} from 'react-router-dom'
 import Wrapper from "../Wrapper";
+import lan from '../../images/language32.png'
 
 const NavbarStyled = styled.div`
  
@@ -24,7 +25,7 @@ const NavbarStyled = styled.div`
   .nav-menu {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 2em;
     text-align: center;
     width: 70vw;
@@ -58,7 +59,25 @@ const NavbarStyled = styled.div`
   .menu-icon {
     display: none;
   }
-
+.language-icon{
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  .language-img{
+  width:25px;
+  height:25px;
+  background-image:url(${lan});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  p{
+    letter-spacing:3px;
+    margin-left:3px;
+    font-size:1rem;
+    font-weight:300;
+  }
+}
   @media screen and (max-width: 800px) {
     
     .nav-menu {
@@ -121,7 +140,7 @@ const NavbarStyled = styled.div`
 `;
 
 
-const Navbar = () => {
+const Navbar = ({currentLocale,onClick}) => {
   
   const [clicked, setClicked] = useState(false);
   
@@ -165,6 +184,10 @@ const Navbar = () => {
               <i className="fas fa-times"></i>
             </div>
             {RenderMenuItems}
+            <div className="language-icon" onClick={onClick}>
+              <div className="language-img"></div>
+              <p>{currentLocale === "en" ? "ES" : "EN"}</p>
+            </div>
           </ul>
         </nav>
       </Wrapper>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useIntl } from "react-intl";
 
 const WorkProjectsLayoutStyled = styled(motion.div)`
   display: flex;
@@ -33,19 +34,21 @@ const WorkProjectsLayoutStyled = styled(motion.div)`
         cursor: pointer;
         text-decoration: none;
         color: rgb(224, 80, 80);
-        margin-left:5px;
+        margin-left: 5px;
       }
     }
   }
   .frontend {
     &:after {
-      content:${({projectDeployFrontend})=> "'"+projectDeployFrontend+"'"};
+      content: ${({ projectDeployFrontend }) =>
+        "'" + projectDeployFrontend + "'"};
       color: rgb(224, 80, 80);
     }
   }
   .backend {
     &:after {
-      content:${({projectDeployBackend})=> "'"+projectDeployBackend+"'"};
+      content: ${({ projectDeployBackend }) =>
+        "'" + projectDeployBackend + "'"};
       color: rgb(224, 80, 80);
     }
   }
@@ -89,8 +92,6 @@ const WorkProjectsLayoutStyled = styled(motion.div)`
     }
   }
   @media screen and (max-width: 768px) {
- 
-
     flex-direction: column;
     img {
       width: 100%;
@@ -134,8 +135,8 @@ const WorkProjectsLayout = ({
   projectDetail,
   projectFrontend,
   projectBackend,
-  projectDeployFrontend='',
-  projectDeployBackend='',
+  projectDeployFrontend = "",
+  projectDeployBackend = "",
   projectLink,
 }) => {
   const pageVariants = {
@@ -148,6 +149,7 @@ const WorkProjectsLayout = ({
       x: "-80vw",
     },
   };
+  const intl = useIntl();
   return (
     <WorkProjectsLayoutStyled
       initial={pageVariants.outX}
@@ -162,10 +164,12 @@ const WorkProjectsLayout = ({
         <h2 className="title">{projectName}</h2>
         <p>{projectDetail}</p>
         <p className="demo">
-          You can see the demo here:
-          <a href={projectLink}>Link</a>
+          {intl.messages["work.seeDemo"]}
+          <a href={projectLink} target="_blank" rel="noopener noreferrer">
+            Link
+          </a>
         </p>
-        <p>What i use for this?</p>
+        <p>{intl.messages["work.iUse"]}</p>
         <p className="frontend">Frontend: {projectFrontend} </p>
         <p className="backend">Backend: {projectBackend} </p>
       </div>

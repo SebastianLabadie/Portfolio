@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useIntl } from "react-intl";
 
 const LayoutInfoAndSkillsStyled = styled.div`
   .ml {
@@ -117,22 +118,18 @@ const LayoutInfoAndSkillsStyled = styled.div`
     grid-gap: 20px;
   }
 `;
-const layoutInfoAndSkills = () => {
+const LayoutInfoAndSkills = () => {
+  const intl=useIntl()
   return (
     <LayoutInfoAndSkillsStyled>
       <div className="containerInfo">
-        <h2 className="title">Something about me</h2>
-        <p className="info">Hello!</p>
-        <p className="info ml red">I'm Sebastian - Web Developer</p>
-        <p className="info ml">
-          from Canelones, Uruguay. I am currently a software engineering
-          student. I have no prior experience working in a company, but you can
-          see my demos on the work page. I like frontend & backend, and of
-          course the minimalist and elegant websites.
-        </p>
+        <h2 className="title">{intl.messages["about.info.title"]}</h2>
+        <p className="info">{intl.messages["about.info.hello"]}</p>
+        <p className="info ml red">{intl.messages["about.info.webDev"]}</p>
+        <p className="info ml">{intl.messages["about.info.fromWhere"]}</p>
       </div>
       <div className="containerSkills">
-        <h2 className="title">My knowledge</h2>
+        <h2 className="title">{intl.messages["about.skills.title"]}</h2>
         <div className="skills">
           <p>HTML</p>
           <p>CSS 3</p>
@@ -152,4 +149,4 @@ const layoutInfoAndSkills = () => {
   );
 };
 
-export default layoutInfoAndSkills;
+export default LayoutInfoAndSkills;

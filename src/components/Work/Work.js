@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Wrapper from "../Wrapper";
 import WorkProjectsLayout from "./WorkProjectsLayout";
 import WorkGitInfo from "./WorkGitInfo";
+import {useIntl} from 'react-intl'
+
 
 const WorkStyled = styled.div`
   margin: 2em 1em;
@@ -15,13 +17,14 @@ const WorkStyled = styled.div`
 `;
 
 const Work = () => {
+  const intl=useIntl()
   return (
     <Wrapper>
       <WorkStyled>
         <WorkProjectsLayout
           transitionDuration={0.7}
           projectName="Amazon Clone"
-          projectDetail="This is an Amazon clone app, you can login-logout, buy products and view the basket, all dynamic using Context api"
+          projectDetail= {intl.messages['work.amazon.projectDetail']}
           projectFrontend="React,Styled-Components,MaterialUI,Context"
           projectBackend="Firebase"
           projectDeployFrontend="(deploy: Netlify)"
@@ -31,7 +34,7 @@ const Work = () => {
           <WorkProjectsLayout
             transitionDuration={1}
             projectName="Whatsapp Clone"
-            projectDetail="This is wpp web clone, you can login and chat in realtime in a room."
+            projectDetail={intl.messages['work.whatsapp.projectDetail']}
             projectFrontend="React, MaterialUI, Axios,Styled Components"
             projectBackend="Node, Express, Mongodb,Firebase "
             projectDeployFrontend="(deploy: Netlify)"
@@ -41,7 +44,7 @@ const Work = () => {
         <WorkProjectsLayout
           transitionDuration={1.3}
           projectName="Flag Project"
-          projectDetail="The purpose of this application is to be able to search the most relevant information of each country, created with restcountries api."
+          projectDetail={intl.messages['work.flags.projectDetail']}
           projectFrontend="React, Redux, Fetch, Styled Components"
           projectDeployFrontend="(deploy: Github Pages)"
           projectDeployBackend="none"
@@ -50,7 +53,7 @@ const Work = () => {
         <WorkProjectsLayout
           transitionDuration={1.5}
           projectName="Notes App"
-          projectDetail="This is an application in which you can create, update and delete users, in turn they can create, update and delete notes."
+          projectDetail={intl.messages['work.notes.projectDetail']}
           projectFrontend="React, Bootstrap, Axios"
           projectBackend="Node, Express, Mongodb "
           projectDeployFrontend="(deploy: Github Pages)"

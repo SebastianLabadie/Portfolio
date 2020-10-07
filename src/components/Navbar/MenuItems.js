@@ -1,3 +1,6 @@
+import {IntlShape} from 'react-intl';
+
+
 export const MenuItems=[
     {   
         title:'Home',

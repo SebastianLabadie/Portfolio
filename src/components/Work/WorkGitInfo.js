@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useIntl } from "react-intl";
 
 const WorkGitInfotStyled = styled(motion.div)`
   display: grid;
@@ -93,34 +94,63 @@ const WorkGitInfotStyled = styled(motion.div)`
   }
 `;
 const WorkGitInfo = () => {
+  const intl = useIntl();
   return (
     <WorkGitInfotStyled>
       <div className="container-git-info">
-        <h2 className="title">GitHub Projects.</h2>
+        <h2 className="title">{intl.messages["work.git.title"]}</h2>
         <p>
-          Here are some of my projects that I created during my spare time. I
-          constantly keep on improving my skills by making these fun projects.
-          These projects are available on my
-          <a href="https://github.com/SebastianLabadie">github repository</a>
+          {intl.messages["work.git.hereSome"]}
+          <a
+            href="https://github.com/SebastianLabadie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {intl.messages["work.git.repository"]}
+          </a>
         </p>
       </div>
       <div className="container-git-repositories">
-        <a href="https://github.com/SebastianLabadie/react-amazon-clone">
-          <span>/01</span> Amazon Clone 
+        <a
+          href="https://github.com/SebastianLabadie/react-amazon-clone"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>/01</span> Amazon Clone
         </a>
-        <a href="https://github.com/SebastianLabadie/flags-project">
+        <a
+          href="https://github.com/SebastianLabadie/flags-project"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>/02</span> Flags Project
         </a>
-        <a href="https://github.com/SebastianLabadie/CRUD-MERN">
+        <a
+          href="https://github.com/SebastianLabadie/CRUD-MERN"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>/03</span> Notes App
         </a>
-        <a href="https://github.com/SebastianLabadie/react-whatsapp-clone">
+        <a
+          href="https://github.com/SebastianLabadie/react-whatsapp-clone"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>/04</span> Whatsapp Clone
         </a>
-        <a href="https://github.com/SebastianLabadie/weather-app">
+        <a
+          href="https://github.com/SebastianLabadie/weather-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>/05</span> Weather App
         </a>
-        <a href="https://github.com/SebastianLabadie/Chat-App-Demo">
+        <a
+          href="https://github.com/SebastianLabadie/Chat-App-Demo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>/06</span> Chat Realtime
         </a>
       </div>

@@ -6,6 +6,12 @@ export const allMessages={
         'home.work' : "Actualmente estoy buscando trabajo como desarrollador P/MERN",
         'home.see' : "En el menú puedes encontrar mis trabajos de forma detallada",
 
+        //NAVBAR
+        'nav.home' : "Inicio",
+        'nav.work' : "Trabajos",
+        'nav.about' : "Sobre mí",
+        'nav.contact' : "Contacto",
+
         //FOOTER
         'footer.thankT': "Gracias!",
         'footer.interest': "Gracias tener interés en mi portafolio. Si quieres hablar acerca de alguno de mis proyectos solo contáctame! :D",
@@ -55,6 +61,12 @@ export const allMessages={
         'home.full' : "I'm a Fullstack web developer.",
         'home.work' : "I am currently looking for work as a P/MERN developer.",
         'home.see' : "In the menu you will find my portfolio with detailed works",
+
+        //NAVBAR
+        'nav.home' : "Home",
+        'nav.work' : "Work",
+        'nav.about' : "About",
+        'nav.contact' : "Contact",
 
         //FOOTER
         'footer.thankT': "Thank you!",

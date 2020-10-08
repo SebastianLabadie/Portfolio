@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { MenuItems } from "./MenuItems";
-import {Link} from 'react-router-dom'
+import  MenuItem  from "./MenuItem";
 import Wrapper from "../Wrapper";
 import lan from '../../images/language32.png'
-
+import {useIntl} from 'react-intl'
 const NavbarStyled = styled.div`
  
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -114,6 +113,11 @@ const NavbarStyled = styled.div`
       top:2.5vh;
       right:3vw;
     }
+    .language-icon{
+      position:absolute;
+      bottom:0;
+      right:0;
+    }
     li {
       margin: 25px;
     }
@@ -141,7 +145,7 @@ const NavbarStyled = styled.div`
 
 
 const Navbar = ({currentLocale,onClick}) => {
-  
+  const intl = useIntl()
   const [clicked, setClicked] = useState(false);
   
     
@@ -157,15 +161,6 @@ const Navbar = ({currentLocale,onClick}) => {
     setClicked(false)
     document.body.classList.remove('stop-scrolling') 
   }
-    const RenderMenuItems = MenuItems.map((item, i) => {
-      return (
-        <li key={i}>
-          <Link onClick={handleClickLink} to={item.url} className={item.cName}>
-            {item.title}
-          </Link>
-        </li>
-      );
-    });
   
   
   return (
@@ -183,10 +178,14 @@ const Navbar = ({currentLocale,onClick}) => {
             >
               <i className="fas fa-times"></i>
             </div>
-            {RenderMenuItems}
+            
+            <MenuItem title={intl.messages['nav.home']} url="/" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.work']} url="/work" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.about']} url="/about" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.contact']} url="/contact" cName='nav-links' onClick={handleClickLink}/>
             <div className="language-icon" onClick={onClick}>
               <div className="language-img"></div>
-              <p>{currentLocale === "en" ? "ES" : "EN"}</p>
+              <p>{currentLocale.toUpperCase()}</p>
             </div>
           </ul>
         </nav>

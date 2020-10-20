@@ -93,7 +93,7 @@ const Footer = () => {
             {/*poner iconos*/}
             <h3>{intl.messages['footer.resumen']}</h3>
             <div className="info">
-              <a href="https://drive.google.com/file/d/15UXP764q0gzRTUOb73FdUMrLruFbH-9Y/view?usp=sharing" target="_blank" rel="noopener noreferrer">C.V<i className="fas fa-long-arrow-alt-up"></i></a>
+              <a href="https://drive.google.com/file/d/1BQJnaGDsJHZvErYwtRja27oW11sFcA49/view?usp=sharing" target="_blank" rel="noopener noreferrer">C.V<i className="fas fa-long-arrow-alt-up"></i></a>
             </div>
           </div>
         </div>

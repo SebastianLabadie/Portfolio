@@ -31,15 +31,15 @@ const Work = () => {
           projectDeployBackend=""
           projectLink="https://amazon-clone99.netlify.app/"
         />
-          <WorkProjectsLayout
+        <WorkProjectsLayout
             transitionDuration={1}
-            projectName="Whatsapp Clone"
-            projectDetail={intl.messages['work.whatsapp.projectDetail']}
-            projectFrontend="React, MaterialUI, Axios,Styled Components"
-            projectBackend="Node, Express, Mongodb,Firebase "
-            projectDeployFrontend="(deploy: Netlify)"
-            projectDeployBackend="(deploy: Atlas,Heroku)"
-            projectLink="https://wpp-clone.netlify.app/"
+            projectName="iMessage Clone"
+            projectDetail={intl.messages['work.imessage.projectDetail']}
+            projectFrontend="React, Redux, MaterialUI"
+            projectBackend="Firebase auth & store "
+            projectDeployFrontend="(deploy: Firebase Hosting)"
+            projectDeployBackend=""
+            projectLink="https://imessage-clone-312bf.web.app/"
           />
         <WorkProjectsLayout
           transitionDuration={1.3}

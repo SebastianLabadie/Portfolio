@@ -126,19 +126,20 @@ const WorkGitInfo = () => {
           <span>/02</span> Flags Project
         </a>
         <a
+          href="https://github.com/SebastianLabadie/iMessage-clone"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>/04</span> iMessage Clone
+        </a>
+        <a
           href="https://github.com/SebastianLabadie/CRUD-MERN"
           target="_blank"
           rel="noopener noreferrer"
         >
           <span>/03</span> Notes App
         </a>
-        <a
-          href="https://github.com/SebastianLabadie/react-whatsapp-clone"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>/04</span> Whatsapp Clone
-        </a>
+        
         <a
           href="https://github.com/SebastianLabadie/weather-app"
           target="_blank"
@@ -147,11 +148,11 @@ const WorkGitInfo = () => {
           <span>/05</span> Weather App
         </a>
         <a
-          href="https://github.com/SebastianLabadie/Chat-App-Demo"
+          href="https://github.com/SebastianLabadie/react-postgre-todo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>/06</span> Chat Realtime
+          <span>/06</span> PERN-Todo
         </a>
       </div>
     </WorkGitInfotStyled>

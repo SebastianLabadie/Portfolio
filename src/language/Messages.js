@@ -24,8 +24,8 @@ export const allMessages={
         'work.iUse':"¿Qué usé?",
             //AMAZON
         'work.amazon.projectDetail':"Esta aplicación es un clon de Amazon, puedes logearte y realizar compras, estas se guardan en una bd. La aplicación es dinámica gracias a Context api.",
-            //WHATSAPP
-        'work.whatsapp.projectDetail':"Esta aplicación es un clon de Whatsapp Web, puedes iniciar sesión y chatear en tiempo real con personas.",
+            //iMESSAGE
+        'work.imessage.projectDetail':"En esta aplicación al autenticarte con Google, podras crear salas como en Discord o Slack y chatear con personas en tiempo real.",
             //FLAGS
         'work.flags.projectDetail':"El propósito de esta aplicación es poder buscar la información más relevante de cada país, fue creada con la api de restcountries.",
             //NOTES
@@ -80,8 +80,8 @@ export const allMessages={
         'work.iUse':"What i use for this?",
             //AMAZON
         'work.amazon.projectDetail':"This is an Amazon clone app, you can login-logout, buy products and view the basket, all dynamic using Context api.",
-            //WHATSAPP
-        'work.whatsapp.projectDetail':"This is wpp web clone, you can login and chat in realtime in a room.",
+            //iMESSAGE
+        'work.imessage.projectDetail':"In this app, you can create rooms like Slack or Discord and chat with people in realtime. You have to log in with Google.",
             //FLAGS
         'work.flags.projectDetail':"The purpose of this application is to be able to search the most relevant information of each country, created with restcountries api.",
             //NOTES

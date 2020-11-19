@@ -3,7 +3,8 @@ export const allMessages={
         //HOME
         'home.name' : "Hola, Soy",
         'home.full' : "Soy desarrollador web Fullstack.",
-        'home.work' : "Actualmente estoy buscando trabajo como desarrollador P/MERN",
+        'nav.certificates' : "Certificados",
+        'home.work' : "Soy un Freelancer buscando nuevas oportunidades",
         'home.see' : "En el menú puedes encontrar mis trabajos de forma detallada",
 
         //NAVBAR
@@ -18,6 +19,10 @@ export const allMessages={
         'footer.contact': "Contacto",
         'footer.socials': "Redes Sociales",
         'footer.resumen': "Curriculum",
+
+        //CERTIFICATES
+        'certificates.title1': "He tomado varios cursos en Platzi y Coursera.",
+        'certificates.title2': "Al hacer click en cada certificado, puedes ver el contenido del curso.",
 
         //WORK
         'work.seeDemo':"Puedes mirar la versión demo aquí:",
@@ -40,7 +45,7 @@ export const allMessages={
         'about.info.title':"Algo acerca de mi",
         'about.info.hello':"Hola!",
         'about.info.webDev':"Soy Sebastian - Desarrollador Web",
-        'about.info.fromWhere':"de Canelones, Uruguay. Actualmente soy estudiante de ingeniería de software. No tengo experiencia previa trabajando en una empresa, pero puedes ver mis demostraciones en la pestaña de trabajo. Me gusta tanto frontend como backend y, por supuesto, los sitios web minimalistas y elegantes.",
+        'about.info.fromWhere':"de Canelones, Uruguay. Actualmente soy estudiante de ingeniería de software y Desarrollador Freelancer. Puedes ver mis demostraciones en la pestaña de trabajo. Me gusta tanto frontend como backend y, por supuesto, los sitios web minimalistas y elegantes.",
             //SKILLS
         'about.skills.title':"Mi Conocimiento",
 
@@ -59,13 +64,14 @@ export const allMessages={
         //HOME
         'home.name' : "Hello, I'm",
         'home.full' : "I'm a Fullstack web developer.",
-        'home.work' : "I am currently looking for work as a P/MERN developer.",
+        'home.work' : "I'm a Freelancer looking for new opportunities.",
         'home.see' : "In the menu you will find my portfolio with detailed works",
 
         //NAVBAR
         'nav.home' : "Home",
-        'nav.work' : "Work",
         'nav.about' : "About",
+        'nav.work' : "Work",
+        'nav.certificates' : "Certificates",
         'nav.contact' : "Contact",
 
         //FOOTER
@@ -74,6 +80,10 @@ export const allMessages={
         'footer.contact': "Contact",
         'footer.socials': "Social Links",
         'footer.resumen': "Resumen",
+
+        //CERTIFICATES
+        'certificates.title1': "I've taken several courses on Platzi and Coursera.",
+        'certificates.title2': "By clicking on each certificate, you can see the course content.",
 
         //WORK
         'work.seeDemo':"You can see the demo here:",
@@ -96,7 +106,7 @@ export const allMessages={
         'about.info.title':"Something about me",
         'about.info.hello':"Hello!",
         'about.info.webDev':"I'm Sebastian - Web Developer",
-        'about.info.fromWhere':"from Canelones, Uruguay. I am currently a software engineering student. I have no prior experience working in a company, but you can see my demos on the work page. I like frontend & backend, and of course the minimalist and elegant websites.",
+        'about.info.fromWhere':"from Canelones, Uruguay. I am currently a software engineering student and Freelancer Developer. You can see my demos in the work tab. I like both frontend and backend and of course sleek minimalist websites.",
             //SKILLS
         'about.skills.title':"My knowledge",
 

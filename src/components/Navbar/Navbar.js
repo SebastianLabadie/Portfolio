@@ -4,6 +4,8 @@ import  MenuItem  from "./MenuItem";
 import Wrapper from "../Wrapper";
 import lan from '../../images/language32.png'
 import {useIntl} from 'react-intl'
+import Hamburger from "react-hamburgers";
+
 const NavbarStyled = styled.div`
  
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -24,7 +26,7 @@ const NavbarStyled = styled.div`
   .nav-menu {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 2em;
     text-align: center;
     width: 70vw;
@@ -57,6 +59,8 @@ const NavbarStyled = styled.div`
   }
   .menu-icon {
     display: none;
+    z-index:200;
+
   }
 .language-icon{
   display:flex;
@@ -119,7 +123,7 @@ const NavbarStyled = styled.div`
       right:0;
     }
     li {
-      margin: 25px;
+      margin: 5px;
     }
     .nav-links {
       font-size: 3rem;
@@ -149,13 +153,13 @@ const Navbar = ({currentLocale,onClick}) => {
   const [clicked, setClicked] = useState(false);
   
     
-  const handleClickOpen=(e)=>{
+  const handleClickMenu=(e)=>{
     setClicked(!clicked)
-    document.body.classList.add('stop-scrolling') 
-  }
-  const handleClickClose=(e)=>{
-    setClicked(!clicked)
-    document.body.classList.remove('stop-scrolling') 
+    if(clicked){
+      document.body.classList.remove('stop-scrolling') 
+    }else{
+      document.body.classList.add('stop-scrolling') 
+    }
   }
   const handleClickLink=()=>{
     setClicked(false)
@@ -168,20 +172,20 @@ const Navbar = ({currentLocale,onClick}) => {
       <Wrapper>
         <nav className="NavbarItems">
           <h1 className="navbar-name">Sebastián L</h1>
-          <div className="menu-icon open" onClick={handleClickOpen}>
-            <i className="fas fa-bars"></i>
+          <div className="menu-icon">
+
+          <Hamburger
+            active={clicked}
+            type="spin"
+            onClick={handleClickMenu}
+          />
           </div>
+
           <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-            <div
-              className="menu-icon close"
-              onClick={handleClickClose}
-            >
-              <i className="fas fa-times"></i>
-            </div>
-            
             <MenuItem title={intl.messages['nav.home']} url="/" cName='nav-links' onClick={handleClickLink}/>
-            <MenuItem title={intl.messages['nav.work']} url="/work" cName='nav-links' onClick={handleClickLink}/>
             <MenuItem title={intl.messages['nav.about']} url="/about" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.certificates']} url="/certificates" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.work']} url="/work" cName='nav-links' onClick={handleClickLink}/>
             <MenuItem title={intl.messages['nav.contact']} url="/contact" cName='nav-links' onClick={handleClickLink}/>
             <div className="language-icon" onClick={onClick}>
               <div className="language-img"></div>

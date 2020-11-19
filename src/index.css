@@ -8,8 +8,19 @@ body{
   background:rgba(19,20,20,1);
   font-family: 'Inter', sans-serif;
   font-size:16px;
-    color: #dadada;
+  color: #dadada;
   font-weight: 700;
+  position: relative;
+}
+
+/* Hide scrollbar for chrome,safari and opera */
+body::-webkit-scrollbar{
+    display: none;
+}
+ /* Hide scrollbar for IE,Edge and firefox */
+body::-webkit-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #root{

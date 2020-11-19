@@ -11,6 +11,7 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { IntlProvider } from "react-intl";
 import { allMessages } from "./language/Messages";
+import Certificates from "./components/Certificates/Certificates";
 
 function App() {
   const location = useLocation();
@@ -22,27 +23,12 @@ function App() {
         currentLocale={currentLocale}
         onClick={() => setCurrentLocale(currentLocale === "en" ? "es" : "en")}
       />
-      {/* <button
-        style={{
-          position: "fixed",
-          bottom: "15vh",
-          backgroundColor: "yellow",
-          padding: "15px",
-          zIndex: 5000,
-          border: "none",
-          borderRadius: "50%",
-          outline: "none",
-          color: "black",
-          cursor: "pointer",
-        }}
-        onClick={(e) => setCurrentLocale(currentLocale === "en" ? "es" : "en")}
-      >
-        {currentLocale === "en" ? "ES" : "EN"}
-      </button> */}
+     
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/certificates" component={Certificates} />
           <Route exact path="/work" component={Work} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/Portfolio" component={Home} />

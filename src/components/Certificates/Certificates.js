@@ -18,7 +18,8 @@ const CertificatesStyled = styled.div`
     display: grid;
     justify-content: space-around;
     grid-template-columns: repeat(auto-fit, 300px);
-    grid-gap: 20px;
+    grid-gap: 15px;
+    padding:0 20px ;
     margin: 80px auto;
   }
   .certificates__title {

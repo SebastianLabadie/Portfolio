@@ -28,7 +28,7 @@ function App() {
         <Switch location={location} key={location.pathname}>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/certificates" component={Certificates} />
+          <Route exact path="/certifications" component={Certificates} />
           <Route exact path="/work" component={Work} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/Portfolio" component={Home} />

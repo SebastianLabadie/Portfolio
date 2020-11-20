@@ -4,6 +4,8 @@ import styled from "styled-components";
 import profileImg from "../../images/FotoCarne.jpg";
 import { motion } from "framer-motion";
 import LayoutInfoAndSkills from './LayoutInfoAndSkills'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const AboutStyled = styled.div`
   min-width:100vw;
   margin: 0 1em;
@@ -21,10 +23,12 @@ const AboutStyled = styled.div`
     height: 60%;
     width: 100%;
     display: flex;
+    span{
+      margin: auto;
+    }
     img {
       height: 100%;
-       width: 550px; 
-      margin: auto;
+       width: 420px; 
       border-radius: 10px;
       border: none;
       outline: none;
@@ -45,7 +49,7 @@ const AboutStyled = styled.div`
       width: 90%;
       height: 92%;
        img {
-        width:420px;
+        width:400px;
     } 
 
   }
@@ -118,7 +122,7 @@ const About = () => {
         transition={{ duration: 1 }}
         className="container">
           <div className="containerImg">
-            <img src={profileImg} alt="" loading="lazy" />
+            <LazyLoadImage src={profileImg} alt="sebastian labadie"  effect="blur" />
           </div>
           <LayoutInfoAndSkills />
           

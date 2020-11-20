@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import styled, { keyframes } from 'styled-components'
 import Button from './Button'
 
@@ -85,7 +86,7 @@ function Modal({show,setShow,title,img}) {
             <div className="modal__backdrop" onClick={setShow} ></div>
           <div className={show ? `modal__content modal__show` : `modal__content modal__hide` }>
             <Button/>
-            <img src={img} alt=""/>
+            <LazyLoadImage src={img} alt="" loading="lazy"  effect="blur" />
              </div>
         </ModalStyled>,
           document.getElementById('portal')

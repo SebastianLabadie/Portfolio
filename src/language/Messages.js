@@ -71,7 +71,7 @@ export const allMessages={
         'nav.home' : "Home",
         'nav.about' : "About",
         'nav.work' : "Work",
-        'nav.certificates' : "Certificates",
+        'nav.certificates' : "Certifications",
         'nav.contact' : "Contact",
 
         //FOOTER

@@ -184,7 +184,7 @@ const Navbar = ({currentLocale,onClick}) => {
           <ul className={clicked ? "nav-menu active" : "nav-menu"}>
             <MenuItem title={intl.messages['nav.home']} url="/" cName='nav-links' onClick={handleClickLink}/>
             <MenuItem title={intl.messages['nav.about']} url="/about" cName='nav-links' onClick={handleClickLink}/>
-            <MenuItem title={intl.messages['nav.certificates']} url="/certificates" cName='nav-links' onClick={handleClickLink}/>
+            <MenuItem title={intl.messages['nav.certificates']} url="/certifications" cName='nav-links' onClick={handleClickLink}/>
             <MenuItem title={intl.messages['nav.work']} url="/work" cName='nav-links' onClick={handleClickLink}/>
             <MenuItem title={intl.messages['nav.contact']} url="/contact" cName='nav-links' onClick={handleClickLink}/>
             <div className="language-icon" onClick={onClick}>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useIntl } from "react-intl";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const WorkProjectsLayoutStyled = styled(motion.div)`
   display: flex;
@@ -159,7 +160,7 @@ const WorkProjectsLayout = ({
       projectDeployFrontend={projectDeployFrontend}
       projectDeployBackend={projectDeployBackend}
     >
-      <img src={require(`../../images/${projectName}.jpg`)} alt="img"  loading="lazy"/>
+      <LazyLoadImage src={require(`../../images/${projectName}.jpg`)} alt="img" effect="blur" />
       <div className="info">
         <h2 className="title">{projectName}</h2>
         <p>{projectDetail}</p>

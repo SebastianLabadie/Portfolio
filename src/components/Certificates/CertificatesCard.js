@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import styled from "styled-components";
 import Modal from "./Modal";
 const CertificatesCardStyled = styled(motion.div)`
@@ -61,7 +60,7 @@ function CertificatesCard({ title, img }) {
       <div className="certificatesCard__overlay">
         <i class="fas fa-plus"></i>
       </div>
-      <LazyLoadImage src={img} alt="sebastian labadie certificados"  effect="blur" />
+      <img src={img} alt="sebastian labadie certificados" />
       <Modal
         show={show}
         setShow={() => setShow(!show)}

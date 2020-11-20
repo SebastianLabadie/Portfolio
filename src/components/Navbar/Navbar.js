@@ -106,16 +106,10 @@ const NavbarStyled = styled.div`
       opacity: 1;
       transition: all 0.8 ease-out;
     }
-
     .menu-icon {
       display: block;
       font-size: 1.5em;
       cursor: pointer;
-    }
-    .close {
-      position: absolute;
-      top:2.5vh;
-      right:3vw;
     }
     .language-icon{
       position:absolute;
@@ -132,16 +126,6 @@ const NavbarStyled = styled.div`
 
     
   
-  @media screen and (max-width: 479px) {
-    .close{
-     right:5vw;; 
-    }
-  }
-  @media screen and (max-width: 414px) {
-    .close{
-      right:6vw;;
-    }
-  }
 
   
 

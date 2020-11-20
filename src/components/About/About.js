@@ -118,7 +118,7 @@ const About = () => {
         transition={{ duration: 1 }}
         className="container">
           <div className="containerImg">
-            <img src={profileImg} alt="" />
+            <img src={profileImg} alt="" loading="lazy" />
           </div>
           <LayoutInfoAndSkills />
           

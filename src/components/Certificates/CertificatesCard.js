@@ -57,7 +57,7 @@ function CertificatesCard({ title, img }) {
       <div className="certificatesCard__overlay">
         <i class="fas fa-plus"></i>
       </div>
-      <img src={img} alt="asdasd" />
+      <img src={img} alt="asdasd"  loading="lazy" />
       <Modal
         show={show}
         setShow={() => setShow(!show)}

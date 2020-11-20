@@ -159,7 +159,7 @@ const WorkProjectsLayout = ({
       projectDeployFrontend={projectDeployFrontend}
       projectDeployBackend={projectDeployBackend}
     >
-      <img src={require(`../../images/${projectName}.jpg`)} alt="img" />
+      <img src={require(`../../images/${projectName}.jpg`)} alt="img"  loading="lazy"/>
       <div className="info">
         <h2 className="title">{projectName}</h2>
         <p>{projectDetail}</p>

@@ -26,6 +26,12 @@ const CertificatesStyled = styled.div`
     margin-top: 80px;
     font-size: 34px;
   }
+  @media (max-width:556px){
+    .certificates__title{
+
+      font-size: 24px;
+    }
+  }
 `;
 
 function Certificates() {
@@ -49,7 +55,7 @@ function Certificates() {
           initial={pageVariants.outY}
           animate={pageVariants.inY}
           exit={pageVariants.outY}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="certificates__title"
         >
           {intl.messages["certificates.title1"]} <br />

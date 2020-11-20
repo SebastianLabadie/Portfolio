@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import styled, { keyframes } from 'styled-components'
+import Button from './Button'
 
 const hide = keyframes`
     from {
@@ -27,7 +28,7 @@ const show = keyframes`
 `
 
 const ModalStyled=styled.div`
-    //display:${(props)=>props.show ? 'block' : "none"};
+    display:${(props)=>props.show ? 'block' : "none"};
 
     .modal__backdrop{
         display:${(props)=>props.show ? 'block' : "none"};
@@ -40,12 +41,10 @@ const ModalStyled=styled.div`
         z-index: 1;
     }
     .modal__content{
-        background-color:#fff;
-        height:400px;
-        width:400px;
+        width:700px;
         position: fixed;
-        top:calc(50% - 200px);
-        left:calc(50% - 200px);
+        top:5vh;
+        left:calc(50% - 350px);
         z-index:2;
     }
 
@@ -60,13 +59,34 @@ const ModalStyled=styled.div`
         animation:${show} .2s;
         transform: scale(1);
     }
+
+    img{
+      max-width:100%;
+    }
+
+    @media (max-width:768px){
+        .modal__content{
+          width:500px;
+          left:calc(50% - 250px);
+        }
+    } 
+
+    @media (max-width:556px){
+        .modal__content{
+          width:350px;
+          left:calc(50% - 175px);
+        }
+    } 
 `
-function Modal({show,setShow,title}) {
+function Modal({show,setShow,title,img}) {
 
  return ReactDom.createPortal(
         <ModalStyled show={show}>
             <div className="modal__backdrop" onClick={setShow} ></div>
-          <div className={show ? `modal__content modal__show` : `modal__content modal__hide` }>{title}</div>
+          <div className={show ? `modal__content modal__show` : `modal__content modal__hide` }>
+            <Button/>
+            <img src={img} alt=""/>
+             </div>
         </ModalStyled>,
           document.getElementById('portal')
     )

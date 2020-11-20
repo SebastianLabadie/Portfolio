@@ -1,48 +1,69 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "./Modal";
-const CertificatesCardStyled = styled.div`
-
-
+const CertificatesCardStyled = styled(motion.div)`
   width: 300px;
   cursor: pointer;
   position: relative;
   img {
     max-width: 100%;
-    height:231px;
+    height: 231px;
     display: block;
   }
 
   .certificatesCard__overlay {
     position: absolute;
-    display:none;
+    display: none;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
   }
-  &:hover{
+  &:hover {
     .certificatesCard__overlay {
-      display:grid;
-      place-items:center;
-      font-size:28px;
-      color:#B0B0B0;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      color: #b0b0b0;
     }
   }
 
+  
 `;
-function CertificatesCard({ title,img }) {
+function CertificatesCard({ title, img }) {
   const [show, setShow] = useState(false);
 
+  const pageVariants = {
+    inY: {
+      opacity: 1,
+      scale:1,
+    },
+    outY: {
+      opacity: 0,
+      scale:0,
+    },
+  };
+
   return (
-    <CertificatesCardStyled onClick={() => setShow(!show)}>
+    <CertificatesCardStyled
+      initial={pageVariants.outY}
+      animate={pageVariants.inY}
+      exit={pageVariants.outY}
+      transition={{ duration: 0.5 }}
+      onClick={() => setShow(!show)}
+    >
       <div className="certificatesCard__overlay">
         <i class="fas fa-plus"></i>
-
       </div>
       <img src={img} alt="asdasd" />
-      <Modal show={show} setShow={() => setShow(!show)} title={title} />
+      <Modal
+        show={show}
+        setShow={() => setShow(!show)}
+        title={title}
+        img={img}
+      />
     </CertificatesCardStyled>
   );
 }

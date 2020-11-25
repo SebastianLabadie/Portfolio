@@ -1,41 +1,55 @@
-import React, { useState } from "react";
-import "./App.css";
-import "react-toastify/dist/ReactToastify.css";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Work from "./components/Work/Work";
-import Contact from "./components/Contact/Contact";
-import { Route, Switch, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
-import { IntlProvider } from "react-intl";
-import { allMessages } from "./language/Messages";
-import Certificates from "./components/Certificates/Certificates";
+import React from "react";
+import styled from "styled-components";
+import pwa from './pwa.png'
+const AppStyled = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align:center;
+  a{
+    color:rgb(224, 80, 80);
+    text-decoration:none;
+  }
+  img{
+    max-width:90%;
+    margin:0 auto;
+  }
+  h1{
+    margin:1.5em 0;
+  }
 
+  @media (max-width:768px){
+    h1{
+      font-size:1.5em;
+    }
+  }
+
+  @media (max-width:414px){
+    h1{
+      font-size:1em;
+    }
+  }
+`;
 function App() {
-  const location = useLocation();
-  const [currentLocale, setCurrentLocale] = useState("en");
-  const messages = allMessages[currentLocale];
   return (
-    <IntlProvider locale={currentLocale} messages={messages}>
-      <Navbar
-        currentLocale={currentLocale}
-        onClick={() => setCurrentLocale(currentLocale === "en" ? "es" : "en")}
-      />
-     
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/certifications" component={Certificates} />
-          <Route exact path="/work" component={Work} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/Portfolio" component={Home} />
-        </Switch>
-      </AnimatePresence>
-      <Footer />
-    </IntlProvider>
+    <AppStyled>
+      <div className="container">
+
+      <h1>
+        Sorry, I've a new portfolio: {" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://sebastianlb.vercel.app/"
+        >
+          https://sebastianlb.vercel.app/
+        </a>
+      </h1>
+      <h1>I migrated my portfolio to NextJS and turned it into Progressive Web App</h1>
+      <img src={pwa} alt="pwa certificated"/>
+      </div>
+    </AppStyled>
   );
 }
 
